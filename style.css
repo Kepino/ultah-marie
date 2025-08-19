@@ -1,0 +1,109 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    z-index: 10;
+}
+
+#main-text {
+    font-size: 8vmin;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+canvas#fireworks-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+#final-message {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 3vmin;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: 15;
+}
+
+#flower-and-heart {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    pointer-events: none; /* Agar tidak menghalangi klik */
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+#flower {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background: url(https://i.imgur.com/k9m9m6m.png) no-repeat center center/contain;
+}
+
+#heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: url(https://i.imgur.com/2s048wN.png) no-repeat center center/contain;
+}
+
+#start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 20;
+    transition: opacity 0.5s;
+}
+
+#start-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.hidden {
+    display: none;
+}
