@@ -37,6 +37,9 @@ canvas#fireworks-canvas {
     top: 0;
     left: 0;
     z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
 }
 
 #final-message {
@@ -59,7 +62,7 @@ canvas#fireworks-canvas {
     width: 100%;
     height: 100%;
     z-index: 12;
-    pointer-events: none; /* Agar tidak menghalangi klik */
+    pointer-events: none;
     opacity: 0;
     transition: opacity 2s ease-in;
 }
